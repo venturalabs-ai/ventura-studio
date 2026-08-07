@@ -19,23 +19,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Validate required governance files
-        run: |
-          set -euo pipefail
-          test -f README.md
-          test -f LICENSE
-          test -f PROVENANCE.md
-          test -f CHANGELOG.md
-          test -f VERSION
-          test -f scripts/ecosystem_score.py
-          test -f .github/workflows/ecosystem-score.yml
       - name: Compile score generator
         run: python -m py_compile scripts/ecosystem_score.py
-      - name: Reject unsupported production claims
-        run: |
-          set -euo pipefail
-          if grep -RInE --exclude-dir=.git --exclude='*.json' -e '6 production-grade projects' -e '0 critical vulnerabilities' -e '100% CI protected' . ; then
-            echo 'Unsupported portfolio metric found. Metrics must come from verified evidence.' >&2
-            exit 1
-          fi
-          echo 'No unsupported production-grade metrics found'
+      - name: Run governance evals
+        run: python scripts/run_evals.py
