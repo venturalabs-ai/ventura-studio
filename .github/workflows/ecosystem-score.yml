@@ -1,0 +1,34 @@
+name: Ecosystem Score
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 6 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Generate evidence-based metrics
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/ecosystem_score.py
+      - name: Commit metrics when changed
+        shell: bash
+        run: |
+          if git diff --quiet -- metrics/ecosystem.json; then
+            echo "No metric changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add metrics/ecosystem.json
+          git commit -m "chore: update ecosystem metrics"
+          git push
