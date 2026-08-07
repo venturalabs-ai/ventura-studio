@@ -1,0 +1,52 @@
+# ============================================================
+# Ventura Studio — Hub Documental (.gitignore)
+# Versiona APENAS o README.md (hub da coleção) na raiz.
+# ============================================================
+
+# Pastas de projeto (não versionar na raiz)
+.agents/
+.opencode/
+ai-animation-academy/
+components/
+estoque-offshore/
+excel-super-agent/
+gerde-workflows/
+images/
+prompts/
+turma-da-roca/
+ventura-agents/
+ventura-agents-2/
+ventura-art/
+ventura-pro-agro/
+ventura.algorithms/
+ventura.apis/
+ventura.awesome/
+ventura.build/
+ventura.interview/
+ventura.learn/
+ventura.opensource/
+ventura.roadmap/
+ventura.system/
+ventura.toolkit/
+
+# Arquivos de configuração do estúdio (não versionar na raiz)
+opencode.json
+skills-lock.json
+
+# Arquivos de ambiente e editor
+.env
+.env.*
+*.local
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+*.log
