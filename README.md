@@ -6,8 +6,8 @@ Versões próprias e curadas de projetos de código aberto, cada uma com
 `README.md` (curadoria original), `SKILL.md` (padrão **LOOP Skill Engine /
 Deterministic Replay**) e `LICENSE` real.
 
-![Coleção](https://img.shields.io/badge/cole%C3%A7%C3%A3o-10%2B3%20reposit%C3%B3rios-6f42c1)
-![Licenças detectadas](https://img.shields.io/badge/licen%C3%A7as-13%2F13%20detectadas-brightgreen)
+![Coleção](https://img.shields.io/badge/cole%C3%A7%C3%A3o-10%2B4%20reposit%C3%B3rios-6f42c1)
+![Licenças detectadas](https://img.shields.io/badge/licen%C3%A7as-14%2F14%20detectadas-brightgreen)
 ![Autor](https://img.shields.io/badge/autor-Wemerson%20Mota%20de%20Oliveira-blue)
 ![Ano](https://img.shields.io/badge/ano-2026-lightgrey)
 ![License](https://img.shields.io/github/license/chamseddinehiddoud/ventura-studio)
@@ -203,6 +203,7 @@ Explore  →  Compile  →  Replay  →  Regenerate
 | [ventura-agents](https://github.com/chamseddinehiddoud/ventura-agents) | 1ª coleção: 10 agentes de IA de negócio | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura-agents) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura-agents) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura-agents) |
 | [ventura-agents-2](https://github.com/chamseddinehiddoud/ventura-agents-2) | 2ª coleção: 10 agentes de IA de negócio | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura-agents-2) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura-agents-2) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura-agents-2) |
 | [ventura-art](https://github.com/chamseddinehiddoud/ventura-art) | Arte e geração criativa (vídeo multi-plataforma) | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura-art) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura-art) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura-art) |
+| [ventura-pro-agro](https://github.com/chamseddinehiddoud/ventura-pro-agro) | Backend FastAPI de planejamento de plantio e colheita (clima, lua, maré, ZARC, custos) | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura-pro-agro) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura-pro-agro) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura-pro-agro) |
 
 ---
 
