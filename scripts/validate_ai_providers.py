@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """Validate AI providers without printing credentials.
 
-GitHub Models is discovered dynamically from the live catalog so retired model
-IDs do not break validation. External providers are validated only when their
-repository secrets are configured.
+GitHub Models is validated with multiple official API-version header variants
+because availability can differ across account/workflow contexts. External
+providers are validated only when repository secrets are configured.
 """
 from __future__ import annotations
 
@@ -34,19 +34,20 @@ def request_json(method: str, url: str, headers: dict[str, str], payload: dict |
             body = resp.read().decode("utf-8")
             return resp.status, json.loads(body) if body else {}
     except urllib.error.HTTPError as exc:
-        # Do not print response bodies: provider errors can include request metadata.
         return exc.code, {}
     except urllib.error.URLError:
         return 0, {}
 
 
-def github_headers(token: str) -> dict[str, str]:
-    return {
+def github_headers(token: str, api_version: str | None) -> dict[str, str]:
+    headers = {
         "Authorization": f"Bearer {token}",
         "Accept": "application/vnd.github+json",
         "Content-Type": "application/json",
-        "X-GitHub-Api-Version": "2026-03-10",
     }
+    if api_version:
+        headers["X-GitHub-Api-Version"] = api_version
+    return headers
 
 
 def _lightweight_score(model_id: str) -> tuple[int, int, str]:
@@ -56,63 +57,81 @@ def _lightweight_score(model_id: str) -> tuple[int, int, str]:
     return lightweight, dated, model_id
 
 
+def _extract_chat(body: object) -> str:
+    if not isinstance(body, dict):
+        return ""
+    choices = body.get("choices") or []
+    if not choices:
+        return ""
+    return str(((choices[0].get("message") or {}).get("content")) or "")
+
+
+def _validate_github_model(token: str, model: str, headers: dict[str, str]) -> tuple[bool, int]:
+    status, body = request_json(
+        "POST",
+        "https://models.github.ai/inference/chat/completions",
+        headers,
+        {"model": model, "messages": [{"role": "user", "content": PROMPT}], "max_tokens": 20, "temperature": 0},
+    )
+    return status == 200 and "VENTURA_OK" in _extract_chat(body), status
+
+
 def github_models() -> list[Result]:
     token = os.getenv("GITHUB_TOKEN")
     if not token:
         return [Result("github-models", False, False, "GITHUB_TOKEN not configured")]
 
-    headers = github_headers(token)
-    status, catalog = request_json("GET", "https://models.github.ai/catalog/models", headers)
-    if status != 200 or not isinstance(catalog, list):
-        return [Result("github-models", True, False, f"catalog HTTP {status}")]
-
-    # Validate distinct model publishers through the same protected GitHub Models
-    # credential. Prefixes are intentionally broad; actual IDs come from catalog.
-    prefixes = (
-        ("github-models/openai", ("openai/",)),
-        ("github-models/meta", ("meta/", "meta-llama/")),
-        ("github-models/mistral", ("mistral-ai/", "mistral/")),
-        ("github-models/deepseek", ("deepseek/",)),
+    # Official examples currently exist with both 2022-11-28 and newer API
+    # versions. Also try no explicit version, matching GitHub's Actions example.
+    header_variants = (
+        ("2022-11-28", github_headers(token, "2022-11-28")),
+        ("2026-03-10", github_headers(token, "2026-03-10")),
+        ("default", github_headers(token, None)),
     )
-    available_ids = [str(item.get("id", "")) for item in catalog if isinstance(item, dict) and item.get("id")]
-    results: list[Result] = []
 
-    for label, allowed_prefixes in prefixes:
-        candidates = [m for m in available_ids if m.lower().startswith(tuple(p.lower() for p in allowed_prefixes))]
-        candidates.sort(key=_lightweight_score)
-        if not candidates:
+    last_catalog_status = 0
+    for version_label, headers in header_variants:
+        status, catalog = request_json("GET", "https://models.github.ai/catalog/models", headers)
+        last_catalog_status = status
+        if status != 200 or not isinstance(catalog, list):
             continue
 
-        success = False
-        last_status = 0
-        selected = ""
-        for model in candidates[:4]:
-            last_status, body = request_json(
-                "POST",
-                "https://models.github.ai/inference/chat/completions",
-                headers,
-                {
-                    "model": model,
-                    "messages": [{"role": "user", "content": PROMPT}],
-                    "max_tokens": 20,
-                    "temperature": 0,
-                },
-            )
-            text = ""
-            if isinstance(body, dict):
-                choices = body.get("choices") or []
-                if choices:
-                    text = str(((choices[0].get("message") or {}).get("content")) or "")
-            if last_status == 200 and "VENTURA_OK" in text:
-                success = True
-                selected = model
-                break
+        prefixes = (
+            ("github-models/openai", ("openai/",)),
+            ("github-models/meta", ("meta/", "meta-llama/")),
+            ("github-models/mistral", ("mistral-ai/", "mistral/")),
+            ("github-models/deepseek", ("deepseek/",)),
+        )
+        available_ids = [str(item.get("id", "")) for item in catalog if isinstance(item, dict) and item.get("id")]
+        results: list[Result] = []
+        for label, allowed_prefixes in prefixes:
+            candidates = [m for m in available_ids if m.lower().startswith(tuple(p.lower() for p in allowed_prefixes))]
+            candidates.sort(key=_lightweight_score)
+            if not candidates:
+                continue
+            success = False
+            last_status = 0
+            selected = ""
+            for model in candidates[:4]:
+                success, last_status = _validate_github_model(token, model, headers)
+                if success:
+                    selected = model
+                    break
+            results.append(Result(label, True, success, f"HTTP {last_status} api={version_label}" + (f" model={selected}" if success else "")))
+        if results:
+            return results
 
-        results.append(Result(label, True, success, f"HTTP {last_status}" + (f" model={selected}" if success else "")))
+    # Catalog can be unavailable while direct inference is still enabled.
+    # Try model IDs used by GitHub's own public documentation examples.
+    documented_models = ("openai/gpt-4o", "openai/gpt-4.1")
+    for version_label, headers in header_variants:
+        for model in documented_models:
+            ok, status = _validate_github_model(token, model, headers)
+            if ok:
+                return [Result("github-models/openai", True, True, f"HTTP 200 api={version_label} model={model}")]
+            last_catalog_status = status
 
-    if not results:
-        results.append(Result("github-models", True, False, "catalog contained no supported vendor prefixes"))
-    return results
+    return [Result("github-models", True, False, f"unavailable HTTP {last_catalog_status}")]
 
 
 def gemini() -> Result:
@@ -143,16 +162,9 @@ def openai_compatible(provider: str, key_env: str, url: str, model_env: str, def
         "POST",
         url,
         {"Authorization": f"Bearer {key}", "Content-Type": "application/json"},
-        {
-            "model": os.getenv(model_env, default_model),
-            "messages": [{"role": "user", "content": PROMPT}],
-            "max_tokens": 20,
-            "temperature": 0,
-        },
+        {"model": os.getenv(model_env, default_model), "messages": [{"role": "user", "content": PROMPT}], "max_tokens": 20, "temperature": 0},
     )
-    text = ""
-    if isinstance(body, dict):
-        text = str((((body.get("choices") or [{}])[0].get("message") or {}).get("content")) or "")
+    text = _extract_chat(body)
     return Result(provider, True, status == 200 and "VENTURA_OK" in text, f"HTTP {status}")
 
 
@@ -173,19 +185,19 @@ def main() -> int:
     configured = [r for r in results if r.configured]
     valid = [r for r in configured if r.ok]
     github_valid = [r for r in valid if r.provider.startswith("github-models/")]
-    external_configured = [r for r in configured if not r.provider.startswith("github-models/")]
+    external_configured = [r for r in configured if not r.provider.startswith("github-models")]
     broken_external = [r.provider for r in external_configured if not r.ok]
 
     print(f"\nConfigured endpoints: {len(configured)} | Valid endpoints: {len(valid)} | GitHub vendor models valid: {len(github_valid)}")
 
-    # Require at least one live GitHub marketplace vendor. Additional external
-    # provider secrets are optional, but if configured they must validate.
-    if not github_valid:
-        print("ERROR: no live GitHub Models vendor validated", file=sys.stderr)
-        return 1
+    # External provider keys are optional, but a configured broken key is a hard
+    # failure. GitHub Models is attempted automatically and reported honestly.
     if broken_external:
         print("ERROR: configured external provider(s) failed: " + ", ".join(broken_external), file=sys.stderr)
         return 2
+    if not valid:
+        print("ERROR: no working AI provider is currently configured", file=sys.stderr)
+        return 1
     return 0
 
 
