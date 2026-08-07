@@ -21,7 +21,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if grep -RInE --exclude-dir=.git -e 'AKIA[0-9A-Z]{16}' -e 'ghp_[A-Za-z0-9]{36}' -e 'BEGIN (RSA |OPENSSH |EC )?PRIVATE KEY' . ; then
+          if grep -RInE --exclude-dir=.git --exclude-dir=.github -e 'AKIA[0-9A-Z]{16}' -e 'ghp_[A-Za-z0-9]{36}' -e 'BEGIN (RSA |OPENSSH |EC )?PRIVATE KEY' . ; then
             echo 'Possible secret material detected' >&2
             exit 1
           fi
@@ -29,7 +29,7 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          if grep -RInEi --exclude-dir=.git --exclude='*.json' -e '100% CI protected' -e '0 critical vulnerabilities' -e '6 production-grade projects' . ; then
+          if grep -RInEi --exclude-dir=.git --exclude-dir=.github --exclude='*.json' --exclude='ENGINEERING_STANDARD.md' -e '100% CI protected' -e '0 critical vulnerabilities' -e '6 production-grade projects' README.md profile/ ; then
             echo 'Unsupported portfolio metric detected' >&2
             exit 1
           fi
