@@ -22,6 +22,6 @@
     "repo-status-badge": ["github","sentry","grafana","filesystem","json-schema","git"],
     "curation-entry": ["github","github-search","context7","filesystem","openai","anthropic"],
     "skill-audit": ["github","filesystem","git","json-schema","openai","anthropic"],
-    "hub-release-notes": ["github","git","filesystem","sentry","grafana","openai"]
+    "release-notes-hub": ["github","git","filesystem","sentry","grafana","openai"]
   }
 }
