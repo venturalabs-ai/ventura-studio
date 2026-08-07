@@ -1,230 +1,99 @@
 <div align="center">
 
-# Ventura Studio — Coleção Open Source
+# Ventura Studio
 
-Versões próprias e curadas de projetos de código aberto, cada uma com
-`README.md` (curadoria original), `SKILL.md` (padrão **LOOP Skill Engine /
-Deterministic Replay**) e `LICENSE` real.
+### Hub do ecossistema Ventura Labs AI
 
-![Coleção](https://img.shields.io/badge/cole%C3%A7%C3%A3o-10%2B4%20reposit%C3%B3rios-6f42c1)
-![Licenças detectadas](https://img.shields.io/badge/licen%C3%A7as-14%2F14%20detectadas-brightgreen)
-![Autor](https://img.shields.io/badge/autor-Wemerson%20Mota%20de%20Oliveira-blue)
-![Ano](https://img.shields.io/badge/ano-2026-lightgrey)
-![License](https://img.shields.io/github/license/chamseddinehiddoud/ventura-studio)
-![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura-studio)
-![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura-studio)
+Coleção de projetos de IA, engenharia de software, segurança, automação, educação e curadoria técnica.
+
+[![License](https://img.shields.io/github/license/venturalabs-ai/ventura-studio)](LICENSE)
+[![Author](https://img.shields.io/badge/autor-Wemerson%20Mota%20de%20Oliveira-blue)](https://github.com/venturalabs-ai)
 
 </div>
 
-> **Autor:** Wemerson Mota de Oliveira — Copyright © 2026
+## Visão geral
 
----
+O Ventura Studio organiza projetos com níveis de maturidade diferentes. Para manter transparência de portfólio, cada repositório deve deixar claro se é **aplicação funcional**, **framework/agente**, **scaffold em desenvolvimento** ou **curadoria educacional**.
 
-## Índice
+## Flagships técnicos
 
-- [Visão geral](#-visão-geral)
-- [Coleção principal](#-coleção-principal-venturatópico)
-- [Catálogo detalhado por repositório](#-catálogo-detalhado-por-repositório)
-- [Mapeamento de licenças](#-mapeamento-de-licenças)
-- [Padrão das skills](#-padrão-das-skills)
-- [Outras coleções Ventura](#-outras-coleções-ventura)
-- [Como contribuir / usar](#-como-usar)
-- [Licença do hub](#-licença-do-hub)
+| Projeto | Tipo | Foco |
+|---|---|---|
+| [Ventura.SEG](https://github.com/venturalabs-ai/Ventura.SEG) | aplicação / biblioteca | segurança para sistemas multiagentes: DLP, permissões, sandbox, auditoria e credenciais |
+| [ventura-pro-agro](https://github.com/venturalabs-ai/ventura-pro-agro) | aplicação | FastAPI para apoio ao planejamento agrícola com clima, ZARC e custos |
+| [ventura-chat](https://github.com/venturalabs-ai/ventura-chat) | aplicação | chatbot contextual com memória, RAG, LangGraph e CI |
 
----
+## Agentes e frameworks
 
-## 📚 Visão geral
-
-O **Ventura Studio** publica coleções de repositórios que reinterpretam os
-projetos de código aberto mais populares do GitHub. Cada repositório:
-
-| Componente | Descrição |
+| Projeto | Foco |
 |---|---|
-| `README.md` | Curadoria original — estrutura, trilhas e princípios próprios |
-| `SKILL.md` | Skill determinística (LOOP Skill Engine / Deterministic Replay) |
-| `LICENSE` | Licença real, correspondente ao perfil da inspiração original |
+| [ventura-pro](https://github.com/venturalabs-ai/ventura-pro) | agente de engenharia de software para OpenCode |
+| [ventura-agents](https://github.com/venturalabs-ai/ventura-agents) | 10 agentes de IA para funções de negócio |
+| [ventura-agents-2](https://github.com/venturalabs-ai/ventura-agents-2) | segunda coleção de agentes especializados |
+| [autor-ventura](https://github.com/venturalabs-ai/autor-ventura) | pipeline multiagente de escrita e revisão |
+| [ventura-art](https://github.com/venturalabs-ai/ventura-art) | framework de prompts e workflows para mídia generativa |
+| [ai-animation-academy](https://github.com/venturalabs-ai/ai-animation-academy) | laboratório educacional de animação e IA multimodal |
 
-**Princípio central:** nenhum conteúdo dos projetos base é copiado — cada
-repositório entrega estrutura própria + skill executável de alto rendimento.
+## Incubação
 
----
+Estes projetos estão em fase inicial e devem ser apresentados como **scaffolds/protótipos**, até possuírem implementação, testes e demonstração reproduzível suficientes:
 
-## 🗂 Coleção principal: `ventura.<tópico>`
+- [ventura-bio](https://github.com/venturalabs-ai/ventura-bio)
+- [ventura-data](https://github.com/venturalabs-ai/ventura-data)
+- [ventura-game](https://github.com/venturalabs-ai/ventura-game)
+- [ventura-genart](https://github.com/venturalabs-ai/ventura-genart)
+- [ventura-robo](https://github.com/venturalabs-ai/ventura-robo)
+- [ventura-sec](https://github.com/venturalabs-ai/ventura-sec)
+- [ventura-social](https://github.com/venturalabs-ai/ventura-social)
+- [ventura-vision](https://github.com/venturalabs-ai/ventura-vision)
+- [ventura-voice](https://github.com/venturalabs-ai/ventura-voice)
 
-Dez repositórios inspirados nos projetos de código aberto mais baixados do
-GitHub, com foco em **trabalho real com mínimo consumo de tokens**.
+## Curadoria e aprendizado
 
-| # | Repo | Inspiração | Licença | Stars | Forks |
-|---|---|---|---|---|---|
-| 1 | [ventura.learn](https://github.com/chamseddinehiddoud/ventura.learn) | freeCodeCamp | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.learn) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.learn) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.learn) |
-| 2 | [ventura.apis](https://github.com/chamseddinehiddoud/ventura.apis) | public-apis | ![Apache-2.0](https://img.shields.io/github/license/chamseddinehiddoud/ventura.apis) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.apis) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.apis) |
-| 3 | [ventura.roadmap](https://github.com/chamseddinehiddoud/ventura.roadmap) | developer-roadmap | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.roadmap) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.roadmap) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.roadmap) |
-| 4 | [ventura.algorithms](https://github.com/chamseddinehiddoud/ventura.algorithms) | javascript-algorithms | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.algorithms) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.algorithms) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.algorithms) |
-| 5 | [ventura.system](https://github.com/chamseddinehiddoud/ventura.system) | system-design-primer | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.system) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.system) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.system) |
-| 6 | [ventura.interview](https://github.com/chamseddinehiddoud/ventura.interview) | coding-interview-university | ![Apache-2.0](https://img.shields.io/github/license/chamseddinehiddoud/ventura.interview) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.interview) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.interview) |
-| 7 | [ventura.awesome](https://github.com/chamseddinehiddoud/ventura.awesome) | awesome | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.awesome) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.awesome) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.awesome) |
-| 8 | [ventura.build](https://github.com/chamseddinehiddoud/ventura.build) | build-your-own-x | ![EPL-2.0](https://img.shields.io/github/license/chamseddinehiddoud/ventura.build) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.build) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.build) |
-| 9 | [ventura.opensource](https://github.com/chamseddinehiddoud/ventura.opensource) | free-programming-books | ![UPL-1.0](https://img.shields.io/github/license/chamseddinehiddoud/ventura.opensource) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.opensource) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.opensource) |
-| 10 | [ventura.toolkit](https://github.com/chamseddinehiddoud/ventura.toolkit) | react | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.toolkit) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.toolkit) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.toolkit) |
+Os repositórios abaixo são **curadorias/estruturas educacionais originais inspiradas em projetos e práticas públicas**. Não são forks substitutos dos projetos de referência e não implicam afiliação com os mantenedores upstream.
 
----
+| Projeto | Tema |
+|---|---|
+| [ventura.learn](https://github.com/venturalabs-ai/ventura.learn) | trilhas de aprendizado |
+| [ventura.apis](https://github.com/venturalabs-ai/ventura.apis) | APIs públicas e integração |
+| [ventura.roadmap](https://github.com/venturalabs-ai/ventura.roadmap) | roadmaps de carreira |
+| [ventura.algorithms](https://github.com/venturalabs-ai/ventura.algorithms) | algoritmos e estruturas de dados |
+| [ventura.system](https://github.com/venturalabs-ai/ventura.system) | system design |
+| [ventura.interview](https://github.com/venturalabs-ai/ventura.interview) | preparação para entrevistas |
+| [ventura.awesome](https://github.com/venturalabs-ai/ventura.awesome) | curadoria de recursos |
+| [ventura.build](https://github.com/venturalabs-ai/ventura.build) | aprender construindo ferramentas |
+| [ventura.opensource](https://github.com/venturalabs-ai/ventura.opensource) | materiais abertos de programação |
+| [ventura.toolkit](https://github.com/venturalabs-ai/ventura.toolkit) | princípios e padrões de UI |
 
-## 📦 Catálogo detalhado por repositório
+## Padrão de engenharia do ecossistema
 
-### 1. [ventura.learn](https://github.com/chamseddinehiddoud/ventura.learn)
-![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.learn) ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.learn) ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.learn)
+Projetos promovidos como aplicações devem buscar, conforme aplicável:
 
-- **Inspiração:** freeCodeCamp
-- **Foco da skill:** trilha gratuita de programação, do fundamento à carreira
-- **Trilhas:** Fundamentos, Prática, Carreira
-- **Execução:** EXPLORE → COMPILE (plano semanal) → REPLAY (um tópico por dia)
+- README específico e reproduzível;
+- licença compatível com o conteúdo publicado;
+- testes automatizados;
+- CI bloqueante;
+- análise de dependências e secrets scanning em projetos sensíveis;
+- documentação de arquitetura e configuração;
+- SECURITY.md quando houver superfície de segurança relevante;
+- releases e changelog quando houver versionamento público;
+- status de maturidade explícito;
+- ausência de credenciais versionadas.
 
-### 2. [ventura.apis](https://github.com/chamseddinehiddoud/ventura.apis)
-![Apache-2.0](https://img.shields.io/github/license/chamseddinehiddoud/ventura.apis) ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.apis) ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.apis)
+## LOOP Skill Engine
 
-- **Inspiração:** public-apis
-- **Foco da skill:** catálogo e curadoria de APIs públicas por categoria
-- **Estrutura:** receita determinística em `api.json`
-- **Execução:** EXPLORE → COMPILE (índice) → REPLAY (consulta por categoria)
+Parte do ecossistema usa o padrão:
 
-### 3. [ventura.roadmap](https://github.com/chamseddinehiddoud/ventura.roadmap)
-![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.roadmap) ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.roadmap) ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.roadmap)
+**Explore → Compile → Replay → Regenerate**
 
-- **Inspiração:** developer-roadmap
-- **Foco da skill:** roadmaps de carreira dev (frontend, backend, dados, devops)
-- **Estrutura:** receita determinística em `plano.md`
-- **Execução:** EXPLORE → COMPILE (plano) → REPLAY (próximo passo)
+O objetivo é transformar caminhos validados em procedimentos reutilizáveis, diminuindo retrabalho e contexto desnecessário em tarefas recorrentes.
 
-### 4. [ventura.algorithms](https://github.com/chamseddinehiddoud/ventura.algorithms)
-![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.algorithms) ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.algorithms) ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.algorithms)
+## Licenças e referências upstream
 
-- **Inspiração:** javascript-algorithms
-- **Foco da skill:** algoritmos e estruturas de dados com padrões determinísticos
-- **Estrutura:** receita determinística em `padrao.md`
-- **Execução:** EXPLORE → COMPILE (padrão) → REPLAY (exercício do dia)
+Cada repositório declara sua própria licença. A escolha de licença deve refletir o conteúdo realmente publicado e quaisquer obrigações de material derivado. **A licença de um projeto de inspiração não deve ser copiada apenas para criar associação de marca.** Quando houver conteúdo derivado, devem ser respeitadas integralmente as condições da licença upstream.
 
-### 5. [ventura.system](https://github.com/chamseddinehiddoud/ventura.system)
-![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.system) ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.system) ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.system)
+## Autor
 
-- **Inspiração:** system-design-primer
-- **Foco da skill:** design de sistemas em larga escala (escalabilidade, filas, cache)
-- **Estrutura:** receita determinística em `sistema.md`
-- **Execução:** EXPLORE → COMPILE (arquitetura) → REPLAY (componente por vez)
+Wemerson Mota de Oliveira — Ventura Labs AI
 
-### 6. [ventura.interview](https://github.com/chamseddinehiddoud/ventura.interview)
-![Apache-2.0](https://img.shields.io/github/license/chamseddinehiddoud/ventura.interview) ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.interview) ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.interview)
-
-- **Inspiração:** coding-interview-university
-- **Foco da skill:** preparação para entrevistas técnicas de forma determinística
-- **Estrutura:** receita determinística em `plano.md`
-- **Execução:** EXPLORE → COMPILE (plano de estudo) → REPLAY (tópico diário)
-
-### 7. [ventura.awesome](https://github.com/chamseddinehiddoud/ventura.awesome)
-![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.awesome) ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.awesome) ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.awesome)
-
-- **Inspiração:** awesome
-- **Foco da skill:** curadoria de listas por tema com critérios de qualidade
-- **Estrutura:** receita determinística em `indice.md`
-- **Execução:** EXPLORE → COMPILE (índice curado) → REPLAY (pesquisa por item)
-
-### 8. [ventura.build](https://github.com/chamseddinehiddoud/ventura.build)
-![EPL-2.0](https://img.shields.io/github/license/chamseddinehiddoud/ventura.build) ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.build) ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.build)
-
-- **Inspiração:** build-your-own-x
-- **Foco da skill:** construir ferramentas do zero (interpretadores, bancos, OS)
-- **Estrutura:** receita determinística em `projeto.md`
-- **Execução:** EXPLORE → COMPILE (projeto) → REPLAY (etapa do dia)
-
-### 9. [ventura.opensource](https://github.com/chamseddinehiddoud/ventura.opensource)
-![UPL-1.0](https://img.shields.io/github/license/chamseddinehiddoud/ventura.opensource) ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.opensource) ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.opensource)
-
-- **Inspiração:** free-programming-books
-- **Foco da skill:** biblioteca gratuita de livros e guias de programação
-- **Estrutura:** receita determinística em `leitura.md`
-- **Execução:** EXPLORE → COMPILE (plano de leitura) → REPLAY (leitura do dia)
-
-### 10. [ventura.toolkit](https://github.com/chamseddinehiddoud/ventura.toolkit)
-![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.toolkit) ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.toolkit) ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.toolkit)
-
-- **Inspiração:** react
-- **Foco da skill:** toolkit de pensamento em UI (componentização, estado, render)
-- **Estrutura:** receita determinística em `ui.md`
-- **Execução:** EXPLORE → COMPILE (design) → REPLAY (componente do dia)
-
----
-
-## ⚖️ Mapeamento de licenças
-
-As licenças reais seguem o perfil de cada inspiração original:
-
-| Licença | Aplicada em | Perfil da inspiração |
-|---|---|---|
-| **MIT** | learn, roadmap, algorithms, system, awesome, toolkit | Microsoft / OpenAI / Anthropic |
-| **Apache-2.0** | apis, interview | Google |
-| **EPL-2.0** | build | IBM |
-| **UPL-1.0** | opensource | Oracle |
-
-Todos os textos de licença usam a **referência canônica do GitHub** (licensee)
-para garantir detecção automática 100%.
-
----
-
-## ⚙️ Padrão das skills
-
-Todos os `SKILL.md` implementam o ciclo **LOOP Skill Engine / Deterministic
-Replay**:
-
-```text
-Explore  →  Compile  →  Replay  →  Regenerate
-  ↑          ↓           ↓          ↑
-  └──────────┴───────────┴──────────┘
-```
-
-| Fase | Descrição | Consumo |
-|---|---|---|
-| **Explore** | Modelo forte analisa o domínio uma vez | Alto (único) |
-| **Compile** | Transforma o caminho em receita determinística | Baixo |
-| **Replay** | Executa a receita sem raciocínio completo | Mínimo / Zero |
-| **Regenerate** | Domínio mudou → regenera a skill | Sob demanda |
-
-**Regras de engenharia comuns:**
-- Token budgets (Explore ≤ 6k tokens; Replay < 200 tokens)
-- Context firewall (replay só vê o item do dia)
-- Prefix caching (sistema byte-stable)
-- Skill distillation (padrão validado vira conhecimento permanente)
-- Stop-yield (material sem valor → propõe troca com uma pergunta)
-
----
-
-## 🌐 Outras coleções Ventura
-
-| Coleção | Descrição | Licença | Stars | Forks |
-|---|---|---|---|---|
-| [ventura-agents](https://github.com/chamseddinehiddoud/ventura-agents) | 1ª coleção: 10 agentes de IA de negócio | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura-agents) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura-agents) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura-agents) |
-| [ventura-agents-2](https://github.com/chamseddinehiddoud/ventura-agents-2) | 2ª coleção: 10 agentes de IA de negócio | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura-agents-2) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura-agents-2) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura-agents-2) |
-| [ventura-art](https://github.com/chamseddinehiddoud/ventura-art) | Arte e geração criativa (vídeo multi-plataforma) | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura-art) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura-art) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura-art) |
-| [ventura-pro-agro](https://github.com/chamseddinehiddoud/ventura-pro-agro) | Backend FastAPI de planejamento de plantio e colheita (clima, lua, maré, ZARC, custos) | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura-pro-agro) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura-pro-agro) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura-pro-agro) |
-
----
-
-## 🚀 Como usar
-
-Cada repositório da coleção é independente:
-
-```bash
-# 1. Escolha um repo da coleção (ex.: ventura.learn)
-git clone https://github.com/chamseddinehiddoud/ventura.learn.git
-
-# 2. Leia o README para entender a curadoria
-# 3. Carregue a SKILL.md no seu agente/estúdio
-# 4. Peça o modo REPLAY para executar a receita do dia
-```
-
-Ou navegue pelo hub: a tabela do catálogo acima linka todos os repositórios.
-
----
-
-## 📄 Licença do hub
-
-Este documento é curadoria original — distribuição livre com atribuição.
-Cada repositório da coleção possui sua própria licença declarada (ver badges).
+[GitHub](https://github.com/venturalabs-ai) · [LinkedIn](https://www.linkedin.com/in/wemerson-mota-de-oliveira-81aa8226/)
