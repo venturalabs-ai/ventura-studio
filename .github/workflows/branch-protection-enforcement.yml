@@ -1,0 +1,27 @@
+name: Enforce Branch Protection
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  protect:
+    runs-on: ubuntu-latest
+    env:
+      VENTURA_GITHUB_ADMIN_TOKEN: ${{ secrets.VENTURA_GITHUB_ADMIN_TOKEN }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Require administrative token
+        shell: bash
+        run: |
+          if [ -z "$VENTURA_GITHUB_ADMIN_TOKEN" ]; then
+            echo "::error::VENTURA_GITHUB_ADMIN_TOKEN is not configured"
+            exit 1
+          fi
+      - name: Enforce protection on six flagship main branches
+        run: python scripts/enforce_branch_protection.py
