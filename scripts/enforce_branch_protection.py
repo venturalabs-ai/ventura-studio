@@ -45,7 +45,6 @@ def request(method: str, path: str, payload: dict | None = None) -> dict:
             raw = resp.read().decode("utf-8")
             return json.loads(raw) if raw else {}
     except urllib.error.HTTPError as exc:
-        # Never expose response bodies because they may contain sensitive metadata.
         raise RuntimeError(f"GitHub API HTTP {exc.code} for {method} {path}") from exc
 
 
@@ -82,8 +81,8 @@ def protect(repo: str) -> dict:
         "required_pull_request_reviews": {
             "dismiss_stale_reviews": True,
             "require_code_owner_reviews": False,
-            "required_approving_review_count": 1,
-            "require_last_push_approval": True,
+            "required_approving_review_count": 0,
+            "require_last_push_approval": False,
         },
         "restrictions": None,
         "required_linear_history": True,
