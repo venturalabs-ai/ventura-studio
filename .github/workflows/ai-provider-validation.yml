@@ -1,0 +1,38 @@
+name: AI Provider Validation
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 8 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/validate_ai_providers.py'
+      - 'scripts/ai_router.py'
+      - '.github/workflows/ai-provider-validation.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/validate_ai_providers.py'
+      - 'scripts/ai_router.py'
+      - '.github/workflows/ai-provider-validation.yml'
+
+permissions:
+  contents: read
+  models: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+      MISTRAL_API_KEY: ${{ secrets.MISTRAL_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate providers without exposing credentials
+        run: python scripts/validate_ai_providers.py
