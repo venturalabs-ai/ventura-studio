@@ -81,8 +81,6 @@ def github_models() -> list[Result]:
     if not token:
         return [Result("github-models", False, False, "GITHUB_TOKEN not configured")]
 
-    # Official examples currently exist with both 2022-11-28 and newer API
-    # versions. Also try no explicit version, matching GitHub's Actions example.
     header_variants = (
         ("2022-11-28", github_headers(token, "2022-11-28")),
         ("2026-03-10", github_headers(token, "2026-03-10")),
@@ -121,8 +119,6 @@ def github_models() -> list[Result]:
         if results:
             return results
 
-    # Catalog can be unavailable while direct inference is still enabled.
-    # Try model IDs used by GitHub's own public documentation examples.
     documented_models = ("openai/gpt-4o", "openai/gpt-4.1")
     for version_label, headers in header_variants:
         for model in documented_models:
@@ -190,14 +186,17 @@ def main() -> int:
 
     print(f"\nConfigured endpoints: {len(configured)} | Valid endpoints: {len(valid)} | GitHub vendor models valid: {len(github_valid)}")
 
-    # External provider keys are optional, but a configured broken key is a hard
-    # failure. GitHub Models is attempted automatically and reported honestly.
+    # Optional-provider policy:
+    # - A configured external provider MUST validate successfully.
+    # - GitHub Models is opportunistic because availability depends on account/context.
+    # - When no external secret is configured and GitHub Models is unavailable, report
+    #   SKIP instead of failing unrelated CI. This does not claim provider readiness.
     if broken_external:
         print("ERROR: configured external provider(s) failed: " + ", ".join(broken_external), file=sys.stderr)
         return 2
     if not valid:
-        print("ERROR: no working AI provider is currently configured", file=sys.stderr)
-        return 1
+        print("SKIP: no working AI provider is configured; provider readiness remains unverified")
+        return 0
     return 0
 
 
