@@ -10,6 +10,9 @@ Deterministic Replay**) e `LICENSE` real.
 ![Licenças detectadas](https://img.shields.io/badge/licen%C3%A7as-10%2F10%20detectadas-brightgreen)
 ![Autor](https://img.shields.io/badge/autor-Wemerson%20Mota%20de%20Oliveira-blue)
 ![Ano](https://img.shields.io/badge/ano-2026-lightgrey)
+![License](https://img.shields.io/github/license/chamseddinehiddoud/ventura-studio)
+![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura-studio)
+![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura-studio)
 
 </div>
 
