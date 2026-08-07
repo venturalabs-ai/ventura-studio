@@ -51,25 +51,25 @@ repositório entrega estrutura própria + skill executável de alto rendimento.
 Dez repositórios inspirados nos projetos de código aberto mais baixados do
 GitHub, com foco em **trabalho real com mínimo consumo de tokens**.
 
-| # | Repo | Inspiração | Licença |
-|---|---|---|---|
-| 1 | [ventura.learn](https://github.com/chamseddinehiddoud/ventura.learn) | freeCodeCamp | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.learn) |
-| 2 | [ventura.apis](https://github.com/chamseddinehiddoud/ventura.apis) | public-apis | ![Apache-2.0](https://img.shields.io/github/license/chamseddinehiddoud/ventura.apis) |
-| 3 | [ventura.roadmap](https://github.com/chamseddinehiddoud/ventura.roadmap) | developer-roadmap | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.roadmap) |
-| 4 | [ventura.algorithms](https://github.com/chamseddinehiddoud/ventura.algorithms) | javascript-algorithms | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.algorithms) |
-| 5 | [ventura.system](https://github.com/chamseddinehiddoud/ventura.system) | system-design-primer | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.system) |
-| 6 | [ventura.interview](https://github.com/chamseddinehiddoud/ventura.interview) | coding-interview-university | ![Apache-2.0](https://img.shields.io/github/license/chamseddinehiddoud/ventura.interview) |
-| 7 | [ventura.awesome](https://github.com/chamseddinehiddoud/ventura.awesome) | awesome | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.awesome) |
-| 8 | [ventura.build](https://github.com/chamseddinehiddoud/ventura.build) | build-your-own-x | ![EPL-2.0](https://img.shields.io/github/license/chamseddinehiddoud/ventura.build) |
-| 9 | [ventura.opensource](https://github.com/chamseddinehiddoud/ventura.opensource) | free-programming-books | ![UPL-1.0](https://img.shields.io/github/license/chamseddinehiddoud/ventura.opensource) |
-| 10 | [ventura.toolkit](https://github.com/chamseddinehiddoud/ventura.toolkit) | react | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.toolkit) |
+| # | Repo | Inspiração | Licença | Stars | Forks |
+|---|---|---|---|---|---|
+| 1 | [ventura.learn](https://github.com/chamseddinehiddoud/ventura.learn) | freeCodeCamp | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.learn) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.learn) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.learn) |
+| 2 | [ventura.apis](https://github.com/chamseddinehiddoud/ventura.apis) | public-apis | ![Apache-2.0](https://img.shields.io/github/license/chamseddinehiddoud/ventura.apis) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.apis) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.apis) |
+| 3 | [ventura.roadmap](https://github.com/chamseddinehiddoud/ventura.roadmap) | developer-roadmap | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.roadmap) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.roadmap) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.roadmap) |
+| 4 | [ventura.algorithms](https://github.com/chamseddinehiddoud/ventura.algorithms) | javascript-algorithms | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.algorithms) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.algorithms) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.algorithms) |
+| 5 | [ventura.system](https://github.com/chamseddinehiddoud/ventura.system) | system-design-primer | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.system) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.system) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.system) |
+| 6 | [ventura.interview](https://github.com/chamseddinehiddoud/ventura.interview) | coding-interview-university | ![Apache-2.0](https://img.shields.io/github/license/chamseddinehiddoud/ventura.interview) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.interview) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.interview) |
+| 7 | [ventura.awesome](https://github.com/chamseddinehiddoud/ventura.awesome) | awesome | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.awesome) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.awesome) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.awesome) |
+| 8 | [ventura.build](https://github.com/chamseddinehiddoud/ventura.build) | build-your-own-x | ![EPL-2.0](https://img.shields.io/github/license/chamseddinehiddoud/ventura.build) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.build) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.build) |
+| 9 | [ventura.opensource](https://github.com/chamseddinehiddoud/ventura.opensource) | free-programming-books | ![UPL-1.0](https://img.shields.io/github/license/chamseddinehiddoud/ventura.opensource) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.opensource) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.opensource) |
+| 10 | [ventura.toolkit](https://github.com/chamseddinehiddoud/ventura.toolkit) | react | ![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.toolkit) | ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.toolkit) | ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.toolkit) |
 
 ---
 
 ## 📦 Catálogo detalhado por repositório
 
 ### 1. [ventura.learn](https://github.com/chamseddinehiddoud/ventura.learn)
-![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.learn)
+![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.learn) ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.learn) ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.learn)
 
 - **Inspiração:** freeCodeCamp
 - **Foco da skill:** trilha gratuita de programação, do fundamento à carreira
@@ -77,7 +77,7 @@ GitHub, com foco em **trabalho real com mínimo consumo de tokens**.
 - **Execução:** EXPLORE → COMPILE (plano semanal) → REPLAY (um tópico por dia)
 
 ### 2. [ventura.apis](https://github.com/chamseddinehiddoud/ventura.apis)
-![Apache-2.0](https://img.shields.io/github/license/chamseddinehiddoud/ventura.apis)
+![Apache-2.0](https://img.shields.io/github/license/chamseddinehiddoud/ventura.apis) ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.apis) ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.apis)
 
 - **Inspiração:** public-apis
 - **Foco da skill:** catálogo e curadoria de APIs públicas por categoria
@@ -85,7 +85,7 @@ GitHub, com foco em **trabalho real com mínimo consumo de tokens**.
 - **Execução:** EXPLORE → COMPILE (índice) → REPLAY (consulta por categoria)
 
 ### 3. [ventura.roadmap](https://github.com/chamseddinehiddoud/ventura.roadmap)
-![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.roadmap)
+![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.roadmap) ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.roadmap) ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.roadmap)
 
 - **Inspiração:** developer-roadmap
 - **Foco da skill:** roadmaps de carreira dev (frontend, backend, dados, devops)
@@ -93,7 +93,7 @@ GitHub, com foco em **trabalho real com mínimo consumo de tokens**.
 - **Execução:** EXPLORE → COMPILE (plano) → REPLAY (próximo passo)
 
 ### 4. [ventura.algorithms](https://github.com/chamseddinehiddoud/ventura.algorithms)
-![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.algorithms)
+![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.algorithms) ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.algorithms) ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.algorithms)
 
 - **Inspiração:** javascript-algorithms
 - **Foco da skill:** algoritmos e estruturas de dados com padrões determinísticos
@@ -101,7 +101,7 @@ GitHub, com foco em **trabalho real com mínimo consumo de tokens**.
 - **Execução:** EXPLORE → COMPILE (padrão) → REPLAY (exercício do dia)
 
 ### 5. [ventura.system](https://github.com/chamseddinehiddoud/ventura.system)
-![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.system)
+![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.system) ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.system) ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.system)
 
 - **Inspiração:** system-design-primer
 - **Foco da skill:** design de sistemas em larga escala (escalabilidade, filas, cache)
@@ -109,7 +109,7 @@ GitHub, com foco em **trabalho real com mínimo consumo de tokens**.
 - **Execução:** EXPLORE → COMPILE (arquitetura) → REPLAY (componente por vez)
 
 ### 6. [ventura.interview](https://github.com/chamseddinehiddoud/ventura.interview)
-![Apache-2.0](https://img.shields.io/github/license/chamseddinehiddoud/ventura.interview)
+![Apache-2.0](https://img.shields.io/github/license/chamseddinehiddoud/ventura.interview) ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.interview) ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.interview)
 
 - **Inspiração:** coding-interview-university
 - **Foco da skill:** preparação para entrevistas técnicas de forma determinística
@@ -117,7 +117,7 @@ GitHub, com foco em **trabalho real com mínimo consumo de tokens**.
 - **Execução:** EXPLORE → COMPILE (plano de estudo) → REPLAY (tópico diário)
 
 ### 7. [ventura.awesome](https://github.com/chamseddinehiddoud/ventura.awesome)
-![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.awesome)
+![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.awesome) ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.awesome) ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.awesome)
 
 - **Inspiração:** awesome
 - **Foco da skill:** curadoria de listas por tema com critérios de qualidade
@@ -125,7 +125,7 @@ GitHub, com foco em **trabalho real com mínimo consumo de tokens**.
 - **Execução:** EXPLORE → COMPILE (índice curado) → REPLAY (pesquisa por item)
 
 ### 8. [ventura.build](https://github.com/chamseddinehiddoud/ventura.build)
-![EPL-2.0](https://img.shields.io/github/license/chamseddinehiddoud/ventura.build)
+![EPL-2.0](https://img.shields.io/github/license/chamseddinehiddoud/ventura.build) ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.build) ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.build)
 
 - **Inspiração:** build-your-own-x
 - **Foco da skill:** construir ferramentas do zero (interpretadores, bancos, OS)
@@ -133,7 +133,7 @@ GitHub, com foco em **trabalho real com mínimo consumo de tokens**.
 - **Execução:** EXPLORE → COMPILE (projeto) → REPLAY (etapa do dia)
 
 ### 9. [ventura.opensource](https://github.com/chamseddinehiddoud/ventura.opensource)
-![UPL-1.0](https://img.shields.io/github/license/chamseddinehiddoud/ventura.opensource)
+![UPL-1.0](https://img.shields.io/github/license/chamseddinehiddoud/ventura.opensource) ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.opensource) ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.opensource)
 
 - **Inspiração:** free-programming-books
 - **Foco da skill:** biblioteca gratuita de livros e guias de programação
@@ -141,7 +141,7 @@ GitHub, com foco em **trabalho real com mínimo consumo de tokens**.
 - **Execução:** EXPLORE → COMPILE (plano de leitura) → REPLAY (leitura do dia)
 
 ### 10. [ventura.toolkit](https://github.com/chamseddinehiddoud/ventura.toolkit)
-![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.toolkit)
+![MIT](https://img.shields.io/github/license/chamseddinehiddoud/ventura.toolkit) ![stars](https://img.shields.io/github/stars/chamseddinehiddoud/ventura.toolkit) ![forks](https://img.shields.io/github/forks/chamseddinehiddoud/ventura.toolkit)
 
 - **Inspiração:** react
 - **Foco da skill:** toolkit de pensamento em UI (componentização, estado, render)
