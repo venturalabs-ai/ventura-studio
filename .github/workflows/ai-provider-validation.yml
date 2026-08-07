@@ -8,6 +8,13 @@ on:
     branches: [main]
     paths:
       - 'scripts/validate_ai_providers.py'
+      - 'scripts/ai_router.py'
+      - '.github/workflows/ai-provider-validation.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'scripts/validate_ai_providers.py'
+      - 'scripts/ai_router.py'
       - '.github/workflows/ai-provider-validation.yml'
 
 permissions:
