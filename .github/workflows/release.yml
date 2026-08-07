@@ -24,11 +24,10 @@ jobs:
           [[ "$TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]
           VERSION=$(tr -d '[:space:]' < VERSION)
           test "$TAG" = "v$VERSION"
-      - name: Validate governance evidence
+      - name: Validate governance and evals
         run: |
-          test -f PROVENANCE.md
-          test -f scripts/ecosystem_score.py
           python -m py_compile scripts/ecosystem_score.py
+          python scripts/run_evals.py
       - name: Generate SPDX SBOM
         uses: anchore/sbom-action@v0
         with:
